@@ -1,0 +1,428 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;500;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: "Fredoka", sans-serif;
+  /* Deep dark gradient overlay on top of background image */
+  background: linear-gradient(135deg, rgba(10, 10, 26, 0.9), rgba(30, 10, 50, 0.8)), 
+              url("../img/background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #e0e0e0;
+}
+
+header {
+  padding: 0 10vh;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px); /* Blur effect for modern header */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+}
+
+.nav_logo h1 a {
+  color: #bb86fc; /* Electric Purple Logo */
+  text-decoration: none;
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-shadow: 0 0 10px rgba(187, 134, 252, 0.5);
+}
+
+.nav_link {
+  display: flex;
+  list-style: none;
+}
+
+.nav_link li {
+  padding: 0 15px;
+}
+
+.nav_link a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.nav_link a:hover {
+  color: #03dac6; /* Teal accent on hover */
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 85vh;
+  width: 100%;
+  padding: 20px;
+}
+
+/* --- GLASSMORPHISM BOXES --- */
+.login_box,
+.add_student_box,
+.students {
+  max-width: 450px;
+  width: 100%;
+  margin: auto;
+  padding: 40px;
+  /* Dark Glass effect */
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+}
+
+.students {
+  max-width: 900px; /* Wider for tables */
+}
+
+.login_box h1,
+.add_student_box h1,
+.students h1 {
+  color: #ffffff;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+/* --- FORM STYLING --- */
+.login_form,
+.add_student_form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Styling inputs to be dark and sleek */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+select,
+textarea {
+  padding: 14px;
+  margin-bottom: 20px;
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  font-size: 15px;
+  color: white;
+  transition: border 0.3s ease;
+}
+
+input:focus {
+  outline: none;
+  border: 1px solid #bb86fc; /* Purple glow on focus */
+}
+
+/* Action Buttons */
+input[type="submit"], .btn {
+  background: linear-gradient(90deg, #bb86fc, #6200ee);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+input[type="submit"]:hover, .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(187, 134, 252, 0.4);
+}
+
+/* --- TABLE STYLING --- */
+.student_table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background: transparent;
+}
+
+.student_table th,
+.student_table td {
+  padding: 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: left;
+  color: #ccc;
+}
+
+.student_table th {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: #03dac6; /* Teal column headers */
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+}
+
+.student_table tr:hover {
+  background-color: rgba(255, 255, 255, 0.03);
+}
+
+/* Custom Table Links (Edit/Delete) */
+.student_table a {
+    color: #bb86fc;
+    font-weight: 500;
+}
+
+.student_table a:hover {
+    color: #03dac6;
+}
+/* --- ERROR MESSAGE STYLING --- */
+.error-msg {
+    background: rgba(255, 77, 77, 0.15); /* Soft red background */
+    border: 1px solid #ff4d4d;           /* Bright red border */
+    padding: 12px;
+    border-radius: 8px;
+    color: #ff4d4d;                      /* Match the border color */
+    font-size: 0.95rem;
+    text-align: center;
+    margin-bottom: 20px;
+    backdrop-filter: blur(5px);          /* Glass blur effect */
+    animation: fadeIn 0.3s ease-in;      /* Smooth entrance */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Project modified by M. Shafiul Alam
+Added Insertion and Deletion Operation + Redesigned UI
+Original project was created by Faisal Bin Ashraf Sir */
+
+/** {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: "Fredoka", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  background-image: url("../img/background.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+header {
+  padding: 0 10vh;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.nav_logo h1 a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.7rem;
+  margin: 0;
+  font-weight: 500;
+}
+
+.nav_link {
+  display: flex;
+  list-style: none;
+}
+
+.nav_link li {
+  padding: 0 15px;
+}
+
+.nav_link a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.nav_link a:hover {
+  color: #ccc;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90%;
+  width: 100%;
+}
+
+.login_box,
+.add_student_box {
+  max-width: 400px;
+  width: 100%;
+  margin: auto;
+  padding: 40px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.login_box h1,
+.add_student_box h1 {
+  color: black;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.login_form,
+.add_student_form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login_form input[type="text"],
+.login_form input[type="password"],
+.login_form input[type="submit"],
+.add_student_form input[type="text"] {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.login_form input[type="submit"],
+.add_student_form input[type="submit"] {
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 16px;
+}
+
+.login_form input[type="submit"]:hover,
+.add_student_form input[type="submit"]:hover {
+  background-color: rgb(26, 26, 26);
+}
+
+.students {
+  max-width: 800px;
+  width: 100%;
+  margin: auto;
+  padding: 40px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.students h1 {
+  color: black;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.student_table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.student_table th,
+.student_table td {
+  padding: 15px;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+
+.student_table th {
+  background-color: #f2f2f2;
+  color: black;
+  font-weight: 400;
+}
+
+.student_table tr:nth-child(even) {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.student_table tr:hover {
+  background-color: #ddd;
+  cursor: default;
+}
+
+.btn {
+  background: #ffffff;
+  border-radius: 6px;
+  color: #000000;
+  font-size: 14.5px;
+  font-weight: 400;
+  text-decoration: none;
+  cursor: pointer;
+  margin: 10px 0px;
+  float: right;
+  padding: 10px;
+}
+
+.btn:hover {
+  background: #f5f5f5;
+  text-decoration: none;
+}
+*/
